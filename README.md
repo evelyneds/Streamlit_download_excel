@@ -2,7 +2,7 @@
 
 #Sample of how make download button for csv or xlsx file
 
-
+```
 def to_excel(df):
     output = BytesIO()
     writer = pd.ExcelWriter(output, engine='xlsxwriter')
@@ -20,3 +20,4 @@ df_xlsx = to_excel(df_upload)
 st.download_button(label='📥 Download Current Result',
                    data=df_xlsx,
                    file_name='df_result.xlsx')
+```
